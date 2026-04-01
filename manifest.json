@@ -1,0 +1,16 @@
+{
+  "manifest_version": 3,
+  "name": "通用视频信息提取器",
+  "version": "2.1",
+  "description": "通过官方 API 提取 YouTube 视频元数据，支持 B 站",
+  "permissions": [
+    "activeTab",
+    "scripting"
+  ],
+  "host_permissions": [
+    "https://www.googleapis.com/*"
+  ],
+  "action": {
+    "default_popup": "popup.html"
+  }
+}

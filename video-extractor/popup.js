@@ -29,7 +29,7 @@ document.getElementById('extractBtn').addEventListener('click', async () => {
         let cleanTitle = title.replace(/ - YouTube$/i, '');
         let cleanUrl = url.split('&')[0];
 
-        const markdown = `### [${cleanTitle}](${cleanUrl})\n- **平台**: YouTube\n- **作者**: ${author}\n- **发布日期**: ${publishDate}`;
+        const markdown = `### [${cleanTitle}](${cleanUrl}) #内容 #笔记属性\n- **平台**: YouTube\n- **作者**: ${author}\n- **发布日期**: ${publishDate}`;
         showResult(markdown, true);
       } else {
         showResult("❌ API 未返回数据，请检查 API Key 权限或视频是否存在。");
@@ -101,5 +101,5 @@ function extractOtherVideoInfo() {
   let cleanTitle = info.title.replace(/ - (哔哩哔哩|bilibili)$/i, '');
   let cleanUrl = info.url.split('?')[0];
 
-  return `### [${cleanTitle}](${cleanUrl})\n- **平台**: ${info.platform}\n- **作者**: ${info.author || '未获取到'}\n  **发布日期**: ${info.publishDate || '未获取到'}`;
+  return `### [${cleanTitle}](${cleanUrl}) #内容 #笔记属性\n- **平台**: ${info.platform}\n- **作者**: ${info.author || '未获取到'}\n  **发布日期**: ${info.publishDate || '未获取到'}`;
 }
